@@ -3,6 +3,9 @@ package com.example.lat3_akb2_10116067_muhammadfadhilatulhajj;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -79,14 +82,18 @@ public class navigasidrawer extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        Fragment class1 = null;
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_home) {
+            class1 = fragment_home.newInstance();
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_dialy) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_galeri) {
+
+        } else if (id == R.id.nav_music) {
+
+        } else if (id == R.id.nav_profile) {
 
         } else if (id == R.id.nav_share) {
 
@@ -97,5 +104,9 @@ public class navigasidrawer extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame_layout,class1);
+        transaction.commit();
     }
 }
