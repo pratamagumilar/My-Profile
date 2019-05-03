@@ -2,40 +2,38 @@ package com.example.lat3_akb2_10116067_muhammadfadhilatulhajj;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.FragmentPagerAdapter;
+import java.util.ArrayList;
+import java.util.List;
 
 
 //Extending FragmentStatePagerAdapter
-public class DailyPager extends FragmentStatePagerAdapter {
+public class DailyPager extends FragmentPagerAdapter {
 
-    //integer to count number of tabs
-    int tabCount;
+    private final List<Fragment> mFragmentList = new ArrayList<>();
+    private final List<String> mFragmentTitleList = new ArrayList<>();
 
-    //Constructor to the class
-    public DailyPager(FragmentManager fm, int tabCount) {
+    public DailyPager(FragmentManager fm) {
         super(fm);
-        //Initializing tab count
-        this.tabCount= getCount();
     }
 
-    //Overriding method getItem
     @Override
     public Fragment getItem(int position) {
-        //Returning the current tabs
-        switch (position) {
-            case 0:
-                DailyActivityFragment da = new DailyActivityFragment();
-                return da;
-            case 1:
-
-            default:
-                return null;
-        }
+        return mFragmentList.get(position);
     }
 
-    //Overriden method getCount to get the number of tabs
     @Override
     public int getCount() {
-        return tabCount;
+        return mFragmentList.size();
+    }
+
+    public void addFragment(Fragment fragment, String title) {
+        mFragmentList.add(fragment);
+        mFragmentTitleList.add(title);
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return mFragmentTitleList.get(position);
     }
 }
