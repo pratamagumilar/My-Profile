@@ -14,9 +14,6 @@
             android:name=".navigasidrawer"
             android:label="@string/title_activity_navigasidrawer"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".Main3Activity"
-            android:theme="@style/Widget.AppCompat.Light.ActionBar"></activity>
         <activity android:name=".WelcomeActivity" />
         <activity
             android:name=".Main2Activity"

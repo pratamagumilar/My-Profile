@@ -84,7 +84,7 @@ public class WelcomeActivity extends AppCompatActivity {
                     // move to next screen
                     viewPager.setCurrentItem(current);
                 } else {
-                    startActivity(new Intent(WelcomeActivity.this, Main3Activity.class));
+                    startActivity(new Intent(WelcomeActivity.this, navigasidrawer.class));
                     finish();
                 }
             }
