@@ -88,7 +88,7 @@ public class navigasidrawer extends AppCompatActivity
             class1 = fragment_home.newInstance();
 
         } else if (id == R.id.nav_dialy) {
-
+            class1 = DailyFragment.newInstance();
         } else if (id == R.id.nav_galeri) {
 
         } else if (id == R.id.nav_music) {
@@ -101,12 +101,12 @@ public class navigasidrawer extends AppCompatActivity
 
         }
 
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.fl,class1);
+        transaction.commit();
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_layout,class1);
-        transaction.commit();
     }
 }
