@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Walkthrough</string>
+    <string name="red">Lat3_AKB2_10116067_MuhammadFadhilatulHajj</string>
+    <string name="blue">Lat3_AKB2_10116067_MuhammadFadhilatulHajj</string>
+    <string name="green">Lat3_AKB2_10116067_MuhammadFadhilatulHajj</string>
+    <string name="black">Lat3_AKB2_10116067_MuhammadFadhilatulHajj</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_dialy">daily</string>
+    <string name="title_music">Music</string>
+
+    <string name="title_galery">galery</string>
+    <string name="_title_profile">profile</string>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">LANJUT</string>
+    <string name="skip">LEWATI</string>
+    <string name="start">MULAI</string>
+    <string name="title_activity_navigasidrawer">navigasidrawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+
+</resources>
+
+
+
